@@ -1,0 +1,2 @@
+# CUSGACompetition
+for cusga team
