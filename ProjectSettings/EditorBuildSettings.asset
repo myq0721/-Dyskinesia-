@@ -11,4 +11,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2_Corridor.unity
     guid: eb7194718ff6e774fa8e57ebd2b5ffd6
+  - enabled: 1
+    path: Assets/Scenes/3_LivingRoom.unity
+    guid: 26378dd56b5be8c4e9dfbfde2894a6d9
+  - enabled: 1
+    path: Assets/Scenes/4_gohos.unity
+    guid: 20237de9ba9e33641bf3cb4906bc29fe
+  - enabled: 1
+    path: Assets/Scenes/5_A.unity
+    guid: 8ca9aa59c30a7c5458d22a4d1bdeb805
+  - enabled: 1
+    path: Assets/Scenes/5_hos.unity
+    guid: c9476b368eafc8c4086bc39e2b0fa811
+  - enabled: 1
+    path: Assets/Scenes/6_hos2.unity
+    guid: 11879a0bbedf159478e218faf6ee6abd
+  - enabled: 1
+    path: Assets/Scenes/7_coffee.unity
+    guid: bc435075cc26dad4cb59fd7d632d8256
+  - enabled: 1
+    path: Assets/Scenes/8_LivingRoom.unity
+    guid: 30c0393f301f5d54f9951377203790c3
+  - enabled: 1
+    path: Assets/Scenes/9_gege.unity
+    guid: b543e955e99132f459ff6b9492600354
+  - enabled: 1
+    path: Assets/Scenes/10_didi.unity
+    guid: 802067036f11d244b983becb39930d93
   m_configObjects: {}

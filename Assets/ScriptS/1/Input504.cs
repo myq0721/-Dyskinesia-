@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
 public class Input504 : MonoBehaviour
 {
     public GameObject ye, er;
-
     public TMP_InputField input;
     public TMP_Text text;
     private string a;
@@ -20,6 +20,7 @@ public class Input504 : MonoBehaviour
             er.SetActive(false);
             Debug.Log("yes!");
             ye.SetActive(true);
+            SceneManager.LoadScene("3_LivingRoom");
         }else{
             Debug.Log("error!");
             er.SetActive(true);

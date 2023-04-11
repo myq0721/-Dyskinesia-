@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
+    public GameObject[] audio;
     public Rigidbody rBody;
     public GameObject background;
     public float speed = 12;
-
+    private float timer = 0;
     Animator animator;
 
     void Start()
@@ -17,8 +18,9 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
+        
         //按leftshift加速
-        if(Input.GetKeyDown(KeyCode.LeftShift)){
+        if(Input.GetKeyDown(KeyCode.LeftShift)){        
             speed = speed * 3;
             animator.speed *= 3;
             Debug.Log(speed);
@@ -28,24 +30,33 @@ public class MovementController : MonoBehaviour
              animator.speed /= 3;
             Debug.Log(speed);
         }
-
         //转向
-        if(Input.GetKeyDown(KeyCode.A)){
+        if(Input.GetKey(KeyCode.A)){
             transform.rotation = new Quaternion(0,0,0,1);
         }
-        if(Input.GetKeyDown(KeyCode.D)){
+        if(Input.GetKey(KeyCode.D)){
             transform.rotation = new Quaternion(0,1,0,0);
         }
 
         //动画
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)){
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)){
             animator.SetBool("iswalk", true);
-        }
-        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)){
+        }else{
             animator.SetBool("iswalk", false);
         }
-    }
 
+        //一个彩蛋
+        if(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)){
+            Debug.Log("到底要去哪儿啦");
+            timer += Time.deltaTime;
+            if(timer >= 1f){
+                audio[0].SetActive(true);
+            }
+        }else{
+            audio[0].SetActive(false);
+            timer = 0;
+        }
+    }
     private void FixedUpdate()
     {
         //移动脚本
